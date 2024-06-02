@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const url = 'mongodb://localhost:27017/Movies-Blocks';
+const url = 'mongodb+srv://adm21002947:Gupta123@cluster0.syqwwwc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/Movies-Blocks';
 
 const PersonSchema = new mongoose.Schema({
   da: { type: Object, required: true }
@@ -27,9 +27,7 @@ const DBlist = async (i) => {
   } catch (error) {
     console.error('Error:', error);
     throw error;
-  } finally {
-    mongoose.connection.close();
-  }
+  } 
 };
 
 module.exports = DBlist;
